@@ -1,0 +1,28 @@
+defaultNamespace: cattle-system
+helm:
+  chart: https://pandaria-releases.oss-cn-beijing.aliyuncs.com/server-charts/latest/rancher-2.5.12-ent2.tgz
+  #chart: https://pandaria-releases.oss-cn-beijing.aliyuncs.com/2.6-charts/latest/rancher-2.6.3-ent.tgz
+targetCustomizations:
+- name: demo
+  helm:
+    values:
+      hostname: zhenyang.think-show.com
+      ingress:
+        tls:
+          source: secret
+      privateCA: true
+      force: true
+      imagePullSecrets:
+        - name: regcred
+      postDelete:
+        enabled: false
+      useBundledSystemChart: false
+      extraEnv:
+        - name: CATTLE_PROMETHEUS_METRICS
+          value: "true"
+      auditLog:
+        destination: server
+        level: 3
+  clusterSelector:
+    matchLabels:
+      demo: cnrancher
