@@ -6,7 +6,7 @@ targetCustomizations:
 - name: demo
   helm:
     values:
-      hostname: zhenyang.think-show.com
+      hostname: demo.cnrancher.com
       ingress:
         tls:
           source: secret
