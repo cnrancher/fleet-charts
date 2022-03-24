@@ -24,6 +24,8 @@ targetCustomizations:
       auditLog:
         destination: server
         level: 3
+      auditLogServer:
+        DBHost: mysql	
   clusterSelector:
     matchLabels:
       demo: cnrancher
