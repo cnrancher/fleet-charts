@@ -7,6 +7,7 @@ targetCustomizations:
   helm:
     values:
       hostname: demo.cnrancher.com
+      replicas: 1
       ingress:
         tls:
           source: secret
