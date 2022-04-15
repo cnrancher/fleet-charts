@@ -1,11 +1,11 @@
 defaultNamespace: cattle-system
 helm:
+  releaseName: rancher
   chart: https://pandaria-releases.oss-cn-beijing.aliyuncs.com/server-charts/latest/rancher-2.5.13-ent-rc2.tgz
   #chart: https://pandaria-releases.oss-cn-beijing.aliyuncs.com/2.6-charts/latest/rancher-2.6.3-ent.tgz
 targetCustomizations:
 - name: demo
   helm:
-    releaseName: rancher
     values:
       hostname: demo.cnrancher.com
       replicas: 1
