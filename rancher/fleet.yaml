@@ -1,6 +1,6 @@
 defaultNamespace: cattle-system
 helm:
-  chart: https://pandaria-releases.oss-cn-beijing.aliyuncs.com/server-charts/latest/rancher-2.5.13-ent.tgz
+  chart: https://pandaria-releases.oss-cn-beijing.aliyuncs.com/server-charts/latest/rancher-2.5.14-ent.tgz
   #chart: https://pandaria-releases.oss-cn-beijing.aliyuncs.com/2.6-charts/latest/rancher-2.6.3-ent.tgz
 targetCustomizations:
 - name: demo
@@ -23,7 +23,7 @@ targetCustomizations:
         - name: CATTLE_PROMETHEUS_METRICS
           value: "true"
         - name: CATTLE_SERVER_VERSION
-          value: "v2.5.13-ent"
+          value: "v2.5.14-ent"
       auditLog:
         destination: server
         level: 3
